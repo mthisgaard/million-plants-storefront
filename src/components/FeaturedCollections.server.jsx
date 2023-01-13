@@ -41,7 +41,7 @@ export default function FeaturedCollections() {
 
 const QUERY = gql`
   query FeaturedCollections {
-    collections(first: 3, query: "collection_type:smart", sortKey: UPDATED_AT) {
+    collections(first: 3, sortKey: UPDATED_AT) {
       nodes {
         id
         title
