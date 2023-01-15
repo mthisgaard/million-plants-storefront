@@ -35,7 +35,7 @@ export default function Collection() {
       <Suspense>
         <Seo type="collection" data={collection} />
       </Suspense>
-      <header className="grid w-full gap-8 p-4 py-8 md:p-8 lg:p-12 justify-items-start">
+      <header className="grid w-full gap-4 px-4 pt-12 md:px-8 lg:px-12 justify-items-start">
         <h1 className="text-4xl whitespace-pre-wrap font-bold inline-block">
           {collection.title}
         </h1>

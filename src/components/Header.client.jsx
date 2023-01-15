@@ -21,7 +21,7 @@ export default function Header({ shop }) {
       </Drawer>
       <header
         role="banner"
-        className={`flex items-center h-16 p-6 md:p-8 lg:p-10 z-40 top-0 w-full leading-none gap-4 antialiased transition ${
+        className={`flex items-center h-16 sticky p-6 md:p-8 lg:p-10 z-40 top-0 w-full leading-none gap-4 antialiased transition ${
           isHome ? "" : "bg-white-80 shadow-sm backdrop-blur-lg"
         }`}
       >
@@ -37,13 +37,17 @@ export default function Header({ shop }) {
           }
         </div>
         <div>
-          <Link className="px-4 py-2 rounded-lg hover:font-bold" to="/collections">
-            Collections
+          <Link className={`px-4 py-2 rounded-lg
+            ${ isHome ? "bg-white bg-opacity-75 hover:bg-opacity-100" : "bg-neutral-50 bg-opacity-75 hover:bg-gray-100" }
+          `} to="/collections">
+            Plant Collections
           </Link>
         </div>
         <div>
-          <Link className="px-4 py-2 rounded-lg hover:font-bold" to="/all">
-            All products
+          <Link className={`px-4 py-2 rounded-lg
+            ${ isHome ? "bg-white bg-opacity-75 hover:bg-opacity-100" : "bg-neutral-50 bg-opacity-75 hover:bg-gray-100" }
+          `} to="/all">
+            All Plants
           </Link>
         </div>
 

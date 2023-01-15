@@ -16,7 +16,7 @@ export default function ProductCard({ product }) {
             </label>
           )}
           <Image
-            className="aspect-[4/5]"
+            className="aspect-[4/5] object-cover"
             data={product.variants.nodes[0].image}
             alt="Alt Tag"
           />
