@@ -1,6 +1,8 @@
 import { useUrl, Link, useCart } from "@shopify/hydrogen";
 import { Drawer, useDrawer } from "./Drawer.client";
 import { CartDetails } from "./CartDetails.client";
+import logo from '../assets/logo.svg';
+
 
 export default function Header({ shop }) {
   const { pathname } = useUrl();
@@ -10,7 +12,7 @@ export default function Header({ shop }) {
   return (
     <>
       <Drawer open={isOpen} onClose={closeDrawer}>
-        <div className="grid">
+        <div className="grid bg-white">
           <Drawer.Title>
             <h2 className="sr-only">Cart Drawer</h2>
           </Drawer.Title>
@@ -19,24 +21,28 @@ export default function Header({ shop }) {
       </Drawer>
       <header
         role="banner"
-        className={`flex items-center h-16 p-6 md:p-8 lg:p-10 sticky backdrop-blur-lg z-40 top-0 w-full leading-none gap-4 antialiased transition shadow-sm ${
-          isHome ? "bg-transparent" : "bg-white/80"
+        className={`flex items-center h-16 p-6 md:p-8 lg:p-10 z-40 top-0 w-full leading-none gap-4 antialiased transition ${
+          isHome ? "" : "bg-white-80 shadow-sm backdrop-blur-lg"
         }`}
       >
-        { isHome ? 
-          <div className="grow"></div> :
-          <div className="grow">
-            <Link className="font-bold" to="/">
+        <div className="grow">
+          { isHome ? 
+            <Link className="font-bold text-2xl flex inline-block items-center gap-4" to="/">
+              <img className="w-[30px] h-[30px]" src={logo} alt="logo" />
+            </Link> :
+            <Link className="font-bold text-2xl flex inline-block items-center gap-4" to="/">
+              <img className="w-[30px] h-[30px]" src={logo} alt="logo" />
               {shop.name}
-            </Link>
-          </div> }
+            </Link> 
+          }
+        </div>
         <div>
-          <Link className="border px-4 py-2 rounded-lg hover:bg-gray-100" to="/collections">
+          <Link className="px-4 py-2 rounded-lg hover:font-bold" to="/collections">
             Collections
           </Link>
         </div>
         <div>
-          <Link className="border px-4 py-2 rounded-lg hover:bg-gray-100" to="/all">
+          <Link className="px-4 py-2 rounded-lg hover:font-bold" to="/all">
             All products
           </Link>
         </div>
