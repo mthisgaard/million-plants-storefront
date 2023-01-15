@@ -1,6 +1,6 @@
 import { Layout } from "../components/Layout.server";
 import { Link } from "@shopify/hydrogen";
-import plant from '../assets/plant.jpg';
+import plant from '../../public/plant.jpg';
 
 export default function Home() {
   return (
@@ -12,7 +12,7 @@ export default function Home() {
           </h1>
           <div className="px-10 pt-2 sm:w-[70%] md:w-[60%] lg:w-[40%]">
             <h2 className="pb-4 font-bold text-xl">Plants for your home and garden</h2>
-            <p>At Million plants we have all types of plants to make your life more green. Fill your home and garden with a million good reasons to have a smile on your face.</p>
+            <p>At Million Plants we have all types of plants to make your life more green. Fill your home and garden with a million good reasons to have a smile on your face.</p>
           </div>
         </div>
         <img className="object-cover object-left-top lg:fixed lg:h-screen lg:w-[40%] lg:top-0 lg:right-0" src={plant} alt="plant" />
