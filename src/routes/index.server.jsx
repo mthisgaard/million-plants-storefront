@@ -1,6 +1,6 @@
 import { Layout } from "../components/Layout.server";
 import { Link } from "@shopify/hydrogen";
-import plant from '../assets/plant.jpg';
+import plant from '../../public/plant.jpg';
 
 export default function Home() {
   return (
