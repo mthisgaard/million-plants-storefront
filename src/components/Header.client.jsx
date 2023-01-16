@@ -31,9 +31,11 @@ export default function Header({ shop }) {
             <Link className="font-bold text-2xl flex inline-block items-center gap-4" to="/">
               <img className="w-[30px] h-[30px]" src={logo} alt="logo" />
             </Link> :
-            <Link className="font-bold text-2xl flex inline-block items-center gap-4" to="/">
+            <Link className="font-bold text-sm flex inline-block items-center gap-4" to="/">
               <img className="w-[30px] h-[30px]" src={logo} alt="logo" />
-              {shop.name}
+              <div className="hidden sm:block">
+                {shop.name}
+              </div>
             </Link> 
           }
         </div>
