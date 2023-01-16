@@ -26,13 +26,13 @@ export default function ProductDetails({ product }) {
                 {product.vendor}
               </span>
             </div>
-            <ProductForm product={product} />
-            <div className="mt-8">
+            <div>
               <div
                 className="prose border-t border-gray-200 pt-6 text-black text-md"
                 dangerouslySetInnerHTML={{ __html: product.descriptionHtml }}
               ></div>
             </div>
+            <ProductForm product={product} />
           </div>
         </div>
       </section>
@@ -160,7 +160,7 @@ function ProductGallery({ media }) {
 
   return (
     <div
-      className={`grid gap-4 overflow-x-scroll grid-flow-col md:grid-flow-row  md:p-0 md:overflow-x-auto md:grid-cols-2 w-screen md:w-full lg:col-span-2`}
+      className={`grid gap-4 overflow-x-scroll grid-flow-col md:grid-flow-row md:p-0 md:overflow-x-auto md:grid-cols-2 w-screen md:w-full lg:col-span-2`}
     >
       {media.map((med, i) => {
         let extraProps = {};

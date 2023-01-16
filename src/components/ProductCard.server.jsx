@@ -8,21 +8,21 @@ export default function ProductCard({ product }) {
 
   return (
     <Link to={`/products/${product.handle}`}>
-      <div className="grid gap-6">
-        <div className="shadow-sm rounded relative">
+      <div className="grid gap-6 duration-500 transform hover:-translate-y-1">
+        <div className="rounded relative">
           {isDiscounted && (
             <label className="subpixel-antialiased absolute top-0 right-0 m-4 text-right text-notice text-red-600 text-xs">
               Sale
             </label>
           )}
           <Image
-            className="aspect-[4/5] object-cover"
+            className="aspect-[4/5] rounded object-cover shadow-border"
             data={product.variants.nodes[0].image}
             alt="Alt Tag"
           />
         </div>
         <div className="grid gap-1">
-          <h3 className="max-w-prose text-copy w-full overflow-hidden whitespace-nowrap text-ellipsis ">
+          <h3 className="max-w-prose font-bold text-copy w-full overflow-hidden whitespace-nowrap text-ellipsis ">
             {product.title}
           </h3>
           <div className="flex gap-4">

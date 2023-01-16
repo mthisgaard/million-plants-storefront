@@ -24,7 +24,7 @@ export function CartDetails({ onClose }) {
         aria-labelledby="cart-contents"
         className="px-4 pb-4 overflow-auto transition md:px-12"
       >
-        <ul className="grid gap-6 md:gap-10 overflow-y-scroll">
+        <ul className="pt-8 grid gap-6 md:gap-10">
           {lines.map((line) => {
             return (
               <CartLineProvider key={line.id} line={line}>
@@ -76,7 +76,6 @@ function CartCheckoutActions() {
         >
           Continue to Checkout
         </Link>
-        <CartShopPayButton className="flex items-center justify-center rounded-sm mt-2 bg-[#5a31f4] w-full" />
       </div>
     </>
   );
@@ -99,9 +98,9 @@ function OrderSummary() {
         </div>
         <div className="flex items-center justify-between">
           <dt className="flex items-center">
-            <span>Shipping estimate</span>
+            <span>Shipping</span>
           </dt>
-          <dd className="text-green-600">Free and carbon neutral</dd>
+          <dd className="text-green-600">Free</dd>
         </div>
       </dl>
     </>
@@ -128,15 +127,18 @@ export function CartLineItem() {
               {merchandise.product.title}
             </Link>
           </h3>
-
-          <div className="flex flex-col justify-start mt-2">
-            {(merchandise?.selectedOptions || []).map((option) => (
-              <span key={option.name} className="last:mb-4 text-gray-500">
-                {option.name}: {option.value}
-              </span>
-            ))}
+          <div className="flex justify-between">
+            <span>
+              <CartLinePrice as="span" />
+            </span>
+            <div className="flex flex-col justify-start ">
+              {(merchandise?.selectedOptions || []).map((option) => (
+                <span key={option.name} className="last:mb-4 text-gray-500">
+                  {option.value}
+                </span>
+              ))}
+            </div>
           </div>
-
           <div className="flex items-center gap-2 mt-auto">
             <div className="flex justify-start text-copy mr-4">
               <CartLineQuantityAdjust
@@ -166,9 +168,6 @@ export function CartLineItem() {
             </button>
           </div>
         </div>
-        <span>
-          <CartLinePrice as="span" />
-        </span>
       </div>
     </li>
   );
@@ -190,7 +189,7 @@ function CartLineQuantityAdjust({ lineId, quantity }) {
         </CartLineQuantityAdjustButton>
         <CartLineQuantity
           as="div"
-          className="h-[40px] flex justify-center items-center text-center py-[0.125rem] px-2 text-primary/90"
+          className="text-xs h-[40px] flex justify-center items-center text-center py-[0.125rem] px-2 text-primary/90"
         />
         <CartLineQuantityAdjustButton
           adjust="increase"
