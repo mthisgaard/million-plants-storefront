@@ -11,7 +11,7 @@ import { Layout } from "../components/Layout.server";
 import ProductCard from "../components/ProductCard.server";
 import { Suspense } from "react";
 
-export default function Collection() {
+export default function All() {
   const { handle } = useRouteParams();
 
   const {
