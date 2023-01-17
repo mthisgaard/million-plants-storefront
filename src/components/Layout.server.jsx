@@ -2,7 +2,7 @@ import { Suspense } from "react";
 import { useShopQuery, CacheLong, gql, Seo } from "@shopify/hydrogen";
 
 import Header from "./Header.client";
-import Footer from "./Footer.server";
+import Footer from "./Footer.client";
 
 /**
  * A server component that defines a structure and organization of a page that can be used in different parts of the Hydrogen app
