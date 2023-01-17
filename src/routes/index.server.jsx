@@ -21,7 +21,7 @@ export default function Home() {
           <Link className="px-4 py-2 rounded-lg bg-mpdarkblue text-white bg-opacity-90 duration-500 transform hover:-translate-y-1 hover:bg-opacity-100" to="/collections">
             Collections
           </Link>
-          <Link className="px-4 py-2 rounded-lg bg-neutral-200 border bg-opacity-60 duration-500 transform hover:-translate-y-1 hover:bg-opacity-100" to="/all">
+          <Link className="px-4 py-2 rounded-lg bg-neutral-200 border bg-opacity-60 duration-500 transform hover:-translate-y-1 hover:bg-opacity-100" to="/products">
             All Plants
           </Link>
         </div>

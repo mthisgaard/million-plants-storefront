@@ -49,7 +49,7 @@ export default function Header({ shop }) {
         <div>
           <Link className={`px-4 py-2 rounded-lg
             ${ isHome ? "bg-white bg-opacity-75 hover:bg-opacity-100" : "bg-neutral-50 bg-opacity-75 hover:bg-gray-100" }
-          `} to="/all">
+          `} to="/products">
             All Plants
           </Link>
         </div>
