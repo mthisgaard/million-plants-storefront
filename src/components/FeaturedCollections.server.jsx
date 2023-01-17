@@ -10,14 +10,14 @@ export default function FeaturedCollections() {
 
   return (
     <section className="w-full gap-4 md:gap-10 grid p-6 md:p-8 lg:p-12">
-      <h2 className="text-2xl whitespace-pre-wrap max-w-prose font-bold text-lead">
+      <h2 className="z-20 text-2xl whitespace-pre-wrap max-w-prose font-bold text-lead">
         Featured Collections
       </h2>
-      <div className="grid-flow-row grid gap-2 gap-y-6 md:gap-4 lg:gap-6 grid-cols-1 false  sm:grid-cols-3 false false">
+      <div className="z-20 grid-flow-row grid gap-2 gap-y-6 md:gap-4 lg:gap-6 grid-cols-1 false sm:grid-cols-3 false false">
         {collections.nodes.map((collection) => {
           return (
             <Link key={collection.id} to={`/collections/${collection.handle}`}>
-              <div className="reveal grid gap-4 duration-500 transform hover:-translate-y-1">
+              <div className="grid gap-4 duration-500 transform hover:-translate-y-1">
                 {collection?.image && (
                   <Image
                     className="object-bottom rounded shadow-border overflow-clip inline-block aspect-[5/4] md:aspect-[3/2] object-cover"

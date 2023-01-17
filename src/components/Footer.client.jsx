@@ -6,7 +6,7 @@ export default function Footer() {
   const isHome = pathname === "/";
 
   return (
-    <footer className={`relative z-20 flex justify-between gap-6 items-center pt-8 pb-12 mt-12 bg-neutral-100 px-6 sm:px-12`}>
+    <footer className={`relative z-20 flex justify-between gap-6 items-center pt-8 pb-12 mt-12 bg-mpgreen px-6 sm:px-12`}>
       <div className={`${ isHome ? "sm:pl-10 md:pl-16" : "" }`}>
         © 2023 / Hydrogen Shopify Storefront by Malene Thisgaard 
       </div>

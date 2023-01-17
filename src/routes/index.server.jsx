@@ -18,14 +18,14 @@ export default function Home() {
           </div>
         </div>
         <div className="px-8 pt-8 flex gap-4 z-20">
-          <Link className="px-4 py-2 rounded-lg bg-emerald-300 bg-opacity-60 duration-500 transform hover:-translate-y-1 hover:bg-opacity-100" to="/collections">
+          <Link className="px-4 py-2 rounded-lg bg-mpdarkblue text-white bg-opacity-90 duration-500 transform hover:-translate-y-1 hover:bg-opacity-100" to="/collections">
             Collections
           </Link>
           <Link className="px-4 py-2 rounded-lg bg-neutral-200 border bg-opacity-60 duration-500 transform hover:-translate-y-1 hover:bg-opacity-100" to="/all">
             All Plants
           </Link>
         </div>
-        <div className="hidden lg:block bg-neutral-100 pt-10 lg:fixed lg:pt-0 lg:h-screen w-screen lg:w-[45%] lg:top-0 lg:right-0">
+        <div className="hidden lg:block bg-mpgreen pt-10 lg:fixed lg:pt-0 lg:h-screen w-screen lg:w-[45%] lg:top-0 lg:right-0">
         </div>
       </header>
       <div className="sm:px-16 pt-10">
