@@ -17,7 +17,7 @@ export default function FeaturedCollections() {
         {collections.nodes.map((collection) => {
           return (
             <Link key={collection.id} to={`/collections/${collection.handle}`}>
-              <div className="grid gap-4 duration-500 transform hover:-translate-y-1">
+              <div className="reveal grid gap-4 duration-500 transform hover:-translate-y-1">
                 {collection?.image && (
                   <Image
                     className="object-bottom rounded shadow-border overflow-clip inline-block aspect-[5/4] md:aspect-[3/2] object-cover"

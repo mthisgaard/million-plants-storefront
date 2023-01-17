@@ -22,7 +22,7 @@ export default function ProductDetails({ product }) {
               <h1 className="text-4xl font-bold leading-10 whitespace-normal">
                 {product.title}
               </h1>
-              <span className="max-w-prose mb-8 whitespace-pre-wrap inherit text-copy opacity-50 font-medium">
+              <span className="font-satisfy text-xl max-w-prose mb-8 whitespace-pre-wrap inherit text-copy opacity-50 font-medium">
                 {product.vendor}
               </span>
             </div>

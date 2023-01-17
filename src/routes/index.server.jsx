@@ -9,7 +9,7 @@ export default function Home() {
     <Layout>
       <header className="sm:px-14 pt-8 md:px-20 md:pt-20 w-full">
         <div>
-          <h1 className="relative p-8 text-7xl sm:text-8xl z-20 font-bold">
+          <h1 className="relative p-8 text-7xl sm:text-9xl z-20 font-bold font-satisfy">
             Million Plants
           </h1>
           <div className="relative z-20 px-8 sm:w-[70%] md:w-[60%] lg:w-[50%]">
