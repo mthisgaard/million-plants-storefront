@@ -23,7 +23,7 @@ export default function Collections() {
         <Suspense>
           <div className="grid-flow-row grid gap-2 gap-y-6 md:gap-4 lg:gap-6 grid-cols-1 false  sm:grid-cols-3 false false">
             {collections.nodes.map((collection) => (
-                <CollectionCard key={collection.id} collection={collection} />
+              <CollectionCard key={collection.id} collection={collection} />
             ))}
           </div>
         </Suspense>
