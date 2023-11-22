@@ -1,3 +1,3 @@
 # Million Plants Hydrogen Storefront
 
-This is a Shopify Storefront built using Hydrogen.
+Customized Shopify storefront created with Hydrogen's React-based framework.
